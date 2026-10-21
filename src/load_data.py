@@ -14,8 +14,8 @@ load_dotenv(env_path)
 user = os.getenv('user')
 password = os.getenv('password')
 database = os.getenv('database')
-host = 'localhost'
-#host = 'host.docker.internal'
+
+host = 'host.docker.internal'
 
 def get_connection():
     logging.info("Criando conexão em {host}:5432/{database}")
