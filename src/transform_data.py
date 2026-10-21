@@ -34,7 +34,6 @@ columns_names_to_rename = {
         "sys.country": "country",                
         "sys.sunrise": "sunrise",                
         "sys.sunset": "sunset",
-        # weather_id, weather_main, weather_description 
     }
 columns_to_normalize_datetime = ['datetime', 'sunrise', 'sunset']
 
@@ -96,7 +95,7 @@ def normalizar_datetime(df: pd.DataFrame, columns_names:list[str]) -> pd.DataFra
 
 def transformar_dados():
     print("\n Iniciando transformação de dados...")
-    df = create_dataframe(path_name)
+    df = criar_dataframe(path_name)
     df = normalizar_colunas_weather(df)
     df = descartar_colunas(df, columns_names_to_drop)
     df = renomear_colunas(df, columns_names_to_rename)

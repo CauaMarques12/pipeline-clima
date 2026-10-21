@@ -6,7 +6,6 @@ import logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 
-
 def extrair_dados(url:str) -> list:
     response = requests.get(url)
     data = response.json()
@@ -30,4 +29,3 @@ def extrair_dados(url:str) -> list:
     return data
 
 
-extrair_dados(url)
